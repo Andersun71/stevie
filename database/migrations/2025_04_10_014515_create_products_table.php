@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('description');
             $table->string('images');
             $table->decimal('base_price', 10, 2);
+            $table->enum("type", ['goods', 'services']);
             $table->timestamps();
         });
     }

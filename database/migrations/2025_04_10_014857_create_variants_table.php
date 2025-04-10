@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('variants', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("product_id")->constrained();
+            $table->string("type");
+            $table->string("name");
+            $table->decimal("add_price");
             $table->timestamps();
         });
     }
