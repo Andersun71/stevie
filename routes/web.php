@@ -13,6 +13,11 @@ Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
+Route::view('biodata', 'biodata')
+    ->middleware(['auth', 'verified'])
+    ->name('biodata');
+
+
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
 
