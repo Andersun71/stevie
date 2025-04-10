@@ -13,6 +13,10 @@ Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
+Route::view('service', 'service')
+    ->middleware(['auth', 'verified'])
+    ->name('service');
+
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
 
