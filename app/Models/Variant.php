@@ -12,4 +12,9 @@ class Variant extends Model
         'name',
         'add_price'
     ];
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }
