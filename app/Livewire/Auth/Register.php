@@ -15,7 +15,11 @@ class Register extends Component
 {
     public string $name = '';
 
+    public string $username = '';
+
     public string $email = '';
+
+    public string $phone = '';
 
     public string $password = '';
 
@@ -28,10 +32,13 @@ class Register extends Component
     {
         $validated = $this->validate([
             'name' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'alpha_dash', 'max:50', 'unique:' . User::class],
+            'phone' => ['required', 'string', 'regex:/^\+\d{2}\s\d{3}-\d{4}-\d{4,5}$/', 'unique:' . User::class],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        $validated['phone'] = preg_replace('/[\s\-]/', '', $validated['phone']);
         $validated['password'] = Hash::make($validated['password']);
 
         event(new Registered(($user = User::create($validated))));
