@@ -16,6 +16,27 @@
             :placeholder="__('Full name')"
         />
 
+        <flux:input
+            wire:model="username"
+            :label="__('Username')"
+            type="text"
+            required
+            autocomplete="username"
+            :placeholder="__('Choose a username')"
+        />
+
+        <flux:input
+            wire:model="phone"
+            :label="__('Phone Number')"
+            type="tel"
+            mask="+99 999-9999-99999"
+            value="62"
+            required
+            autocomplete="tel"
+            :placeholder="__('Enter your phone number')"
+        />
+
+
         <!-- Email Address -->
         <flux:input
             wire:model="email"
@@ -32,6 +53,7 @@
             :label="__('Password')"
             type="password"
             required
+            viewable
             autocomplete="new-password"
             :placeholder="__('Password')"
         />
@@ -42,6 +64,7 @@
             :label="__('Confirm password')"
             type="password"
             required
+            viewable
             autocomplete="new-password"
             :placeholder="__('Confirm password')"
         />
