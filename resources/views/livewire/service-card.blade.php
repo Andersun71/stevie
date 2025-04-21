@@ -1,11 +1,11 @@
-<div class="relative aspect-video rounded-xl border border-neutral-200 dark:border-neutral-700">
-    <div class="max-w-sm mx-auto rounded-xl overflow-hidden shadow-md bg-white dark:bg-neutral-900">
-        <div class="p-4">
+<div class="relative aspect-video rounded-3xl border border-neutral-200 dark:border-neutral-700">
+    <div class="max-w-sm mx-auto rounded-3xl overflow-hidden shadow-md bg-white dark:bg-neutral-900">
+        <div class="flex flex-col p-4 gap-2">
             <div class="w-full h-48 overflow-hidden">
                 <img src="https://picsum.photos/id/237/200/300" alt="random"
-                    class="w-full h-48 object-cover rounded-xl" />
+                    class="w-full h-48 object-cover rounded-2xl" />
             </div>
-            <div class="items-center flex py-4 text-xl font-bold mb-2 text-gray-800 dark:text-white">
+            <div class="items-center flex text-xl font-bold text-gray-800 dark:text-white">
                 <span class="material-symbols-outlined">
                     smart_toy
                 </span>
@@ -18,16 +18,16 @@
                     maiores natus cumque non veritatis.
                 </p>
             </div>
-            <h2>Start form $100</h2>
+            <div>
+                <h2>Start form $100</h2>
+            </div>
+            <div class="flex justify-end items-center">
+                <span>3 Sold / 4.5</span>
+                <span class="material-symbols-outlined ml-2">
+                    star_half
+                </span>
+            </div>
         </div>
 
-        <div class="px-6 pt-4 pb-6">
-            <span
-                class="inline-block bg-gray-200 dark:bg-neutral-700 rounded-full px-3 py-1 text-sm font-medium text-gray-800 dark:text-white mr-2 mb-2">#photography</span>
-            <span
-                class="inline-block bg-gray-200 dark:bg-neutral-700 rounded-full px-3 py-1 text-sm font-medium text-gray-800 dark:text-white mr-2 mb-2">#travel</span>
-            <span
-                class="inline-block bg-gray-200 dark:bg-neutral-700 rounded-full px-3 py-1 text-sm font-medium text-gray-800 dark:text-white mr-2 mb-2">#winter</span>
-        </div>
     </div>
 </div>
