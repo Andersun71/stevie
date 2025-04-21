@@ -40,11 +40,11 @@
                     </flux:navlist.item>
                     <flux:navlist.item
                         icon="home"
-                        :href="route('service')"
-                        :current="request() -> routeIs('service')"
+                        :href="route('product')"
+                        :current="request() -> routeIs('product')"
                         wire:navigate
                     >
-                        {{ __("Services") }}
+                        {{ __("Products") }}
                     </flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
