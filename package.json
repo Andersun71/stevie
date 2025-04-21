@@ -21,7 +21,9 @@
         "lightningcss-linux-x64-gnu": "^1.29.1"
     },
     "devDependencies": {
-        "@shufo/prettier-plugin-blade": "^1.15.3",
-        "prettier": "^3.5.3"
+        "install": "^0.13.0",
+        "npm": "^11.3.0",
+        "prettier": "^3.5.3",
+        "prettier-plugin-blade": "^2.1.21"
     }
 }

@@ -1,12 +1,8 @@
 {
-    "plugins": [
-        "@shufo/prettier-plugin-blade"
-    ],
+    "plugins": ["prettier-plugin-blade"],
     "overrides": [
         {
-            "files": [
-                "*.blade.php"
-            ],
+            "files": ["*.blade.php"],
             "options": {
                 "parser": "blade",
                 "tabWidth": 4
