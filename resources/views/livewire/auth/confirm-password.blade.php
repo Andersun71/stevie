@@ -18,6 +18,8 @@
             :placeholder="__('Password')"
         />
 
-        <flux:button variant="primary" type="submit" class="w-full">{{ __('Confirm') }}</flux:button>
+        <flux:button variant="primary" type="submit" class="w-full">
+            {{ __("Confirm") }}
+        </flux:button>
     </form>
 </div>
