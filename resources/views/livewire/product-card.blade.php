@@ -12,25 +12,19 @@
                     class="w-full h-48 object-cover rounded-2xl"
                 />
             </div>
-            <div
-                class="items-center flex text-xl font-bold text-gray-800 dark:text-white"
-            >
-                <span class="material-symbols-outlined">smart_toy</span>
-                <span class="ml-2">Aria</span>
-            </div>
             <div>
-                <p
-                    class="text-gray-600 dark:text-gray-300 text-sm line-clamp-2"
-                >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Optio deserunt repellat tempore! Impedit, praesentium ullam
-                    est recusandae eius corporis temporibus laborum animi
-                    placeat consequuntur dolores maiores natus cumque non
-                    veritatis.
+                <p class="text-gray-600 dark:text-gray-300 text-sm truncate">
+                    Lorem ipsum
                 </p>
             </div>
             <div>
-                <h2>Start form $100</h2>
+                <h2 class="font-bold text-3xl">$100</h2>
+            </div>
+            <div
+                class="items-center justify-end flex text-xl text-gray-800 dark:text-white"
+            >
+                <span>Aria</span>
+                <span class="material-symbols-outlined ml-2">smart_toy</span>
             </div>
             <div class="flex justify-end items-center">
                 <span>3 Sold / 4.5</span>
