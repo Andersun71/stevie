@@ -15,10 +15,10 @@ test('new users can register', function () {
     $response = Livewire::test(Register::class)
         ->set('name', 'Test User')
         ->set('username', 'testuser')
-        ->set('phone', '1234567890') 
+        ->set('phone', '+62 812-3456-7890') // Sesuai Regex 
         ->set('email', 'test@example.com')
-        ->set('password', 'password')
-        ->set('password_confirmation', 'password')
+        ->set('password', 'password123')
+        ->set('password_confirmation', 'password123')
         ->call('register');
 
     $response
