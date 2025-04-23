@@ -31,7 +31,7 @@
                         {{ __("Dashboard") }}
                     </flux:navlist.item>
                     <flux:navlist.item
-                        icon="home"
+                        icon="user"
                         :href="route('service')"
                         :current="request() -> routeIs('service')"
                         wire:navigate
@@ -39,7 +39,7 @@
                         {{ __("Services") }}
                     </flux:navlist.item>
                     <flux:navlist.item
-                        icon="home"
+                        icon="puzzle-piece"
                         :href="route('product')"
                         :current="request() -> routeIs('product')"
                         wire:navigate
