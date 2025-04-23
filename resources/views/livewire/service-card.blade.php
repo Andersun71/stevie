@@ -1,8 +1,8 @@
 <div
-    class="relative aspect-video rounded-3xl border border-neutral-200 dark:border-neutral-700"
+    class="relative aspect-video rounded-3xl border border-neutral-200 dark:border-neutral-700 max-lg:max-w-lg"
 >
     <div
-        class="max-w-sm mx-auto rounded-3xl overflow-hidden shadow-md bg-white dark:bg-neutral-900"
+        class="w-auto mx-auto rounded-3xl overflow-hidden shadow-md bg-white dark:bg-neutral-900"
     >
         <div class="flex flex-col p-4 gap-2">
             <div class="w-full h-48 overflow-hidden">

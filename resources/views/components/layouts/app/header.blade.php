@@ -42,7 +42,7 @@
                         <flux:button
                             variant="ghost"
                             icon="adjustments-horizontal"
-                            class="rounded-full p-2 cursor-pointer"
+                            class="rounded-full p-2 cursor-pointer max-lg:hidden"
                         />
 
                         <flux:menu>
@@ -156,8 +156,6 @@
                     </flux:dropdown>
                 </div>
             </flux:navbar>
-
-            <!-- Desktop User Menu -->
         </flux:header>
 
         <!-- Mobile Menu -->
@@ -179,12 +177,28 @@
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')">
                     <flux:navlist.item
-                        icon="layout-grid"
+                        icon="home"
                         :href="route('dashboard')"
                         :current="request()->routeIs('dashboard')"
                         wire:navigate
                     >
                         {{ __("Dashboard") }}
+                    </flux:navlist.item>
+                    <flux:navlist.item
+                        icon="user"
+                        :href="route('service')"
+                        :current="request()->routeIs('service')"
+                        wire:navigate
+                    >
+                        {{ __("Services") }}
+                    </flux:navlist.item>
+                    <flux:navlist.item
+                        icon="puzzle-piece"
+                        :href="route('product')"
+                        :current="request()->routeIs('product')"
+                        wire:navigate
+                    >
+                        {{ __("Products") }}
                     </flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
