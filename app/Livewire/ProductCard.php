@@ -11,7 +11,7 @@ class ProductCard extends Component
 
     public function mount()
     {
-        $this->products = Product::all();
+        $this->products = Product::where('type', 'goods')->get();
     }
     public function render()
     {
