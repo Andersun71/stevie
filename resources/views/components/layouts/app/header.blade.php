@@ -10,40 +10,40 @@
         >
             <flux:sidebar.toggle class="lg:hidden" icon="bars-2" inset="left" />
 
-            <flux:spacer />
+            <flux:spacer class="lg:hidden" />
 
-            <flux:navbar class="me-1.5 space-x-2 rtl:space-x-reverse py-0!">
-                <div class="flex gap-0.5 py-2">
+            <flux:navbar
+                class="me-1.5 space-x-2 rtl:space-x-reverse py-0! w-full flex gap-1.5 justify-between items-center"
+            >
+                <div class="flex gap-0.5">
                     <!-- Search -->
-                    <flux:tooltip :content="__('Search')" position="bottom">
+                    <flux:tooltip
+                        :content="__('Search')"
+                        position="bottom"
+                        class="flex flex-row-reverse items-center gap-2"
+                    >
                         <flux:navbar.item
                             class="!h-10 [&>div>svg]:size-5 justify-end"
                             icon="magnifying-glass"
                             href="#"
                             :label="__('Search')"
                         />
-                    </flux:tooltip>
-
-                    <!-- Cart -->
-                    <flux:tooltip :content="__('Cart')" position="bottom">
-                        <flux:navbar.item
-                            class="h-10 max-lg:hidden [&>div>svg]:size-5"
-                            icon="shopping-cart"
-                            href="#"
-                            target="_blank"
-                            :label="__('Cart')"
-                        >
-                            5
-                        </flux:navbar.item>
+                        <flux:input size="sm" placeholder="Search..." />
                     </flux:tooltip>
 
                     <!-- Filters -->
                     <flux:dropdown>
-                        <flux:button
-                            variant="ghost"
-                            icon="adjustments-horizontal"
-                            class="rounded-full p-2 cursor-pointer max-lg:hidden"
-                        />
+                        <flux:tooltip
+                            :content="__('Filters')"
+                            position="bottom"
+                        >
+                            <flux:button
+                                variant="ghost"
+                                icon="adjustments-horizontal"
+                                class="rounded-full p-2 cursor-pointer max-lg:hidden"
+                                :label="__('Filters')"
+                            />
+                        </flux:tooltip>
 
                         <flux:menu>
                             <flux:menu.item icon="plus">
@@ -83,6 +83,21 @@
                             </flux:menu.item>
                         </flux:menu>
                     </flux:dropdown>
+                </div>
+
+                <div class="flex">
+                    <!-- Cart -->
+                    <flux:tooltip :content="__('Cart')" position="bottom">
+                        <flux:navbar.item
+                            class="h-10 max-lg:hidden [&>div>svg]:size-5"
+                            icon="shopping-cart"
+                            href="#"
+                            target="_blank"
+                            :label="__('Cart')"
+                        >
+                            5
+                        </flux:navbar.item>
+                    </flux:tooltip>
 
                     <!-- User Dropdown -->
                     <flux:dropdown>
