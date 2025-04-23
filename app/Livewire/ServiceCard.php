@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Product;
+use App\Models\User;
 
 class ServiceCard extends Component
 {
@@ -11,7 +12,7 @@ class ServiceCard extends Component
 
     public function mount()
     {
-        $this->services = Product::where('type', 'services')->get();
+        $this->services = Product::where('type', 'services')->with('user')->get();
     }
     public function render()
     {
