@@ -1,35 +1,57 @@
-<div
-    class="relative aspect-video max-lg:max-w-lg h-auto rounded-3xl border border-neutral-200 dark:border-neutral-700"
->
-    <div
-        class="mx-auto rounded-3xl overflow-hidden shadow-md bg-white dark:bg-neutral-900 w-auto h-auto"
-    >
-        <div class="flex flex-col p-4 gap-2">
-            <div class="w-full h-48 overflow-hidden">
-                <img
-                    src="https://picsum.photos/id/237/200/300"
-                    alt="random"
-                    class="w-full h-48 object-cover rounded-2xl"
-                />
-            </div>
-            <div>
-                <p class="text-gray-600 dark:text-gray-300 text-sm truncate">
-                    Lorem ipsum
-                </p>
-            </div>
-            <div>
-                <h2 class="font-bold text-3xl">$100</h2>
-            </div>
+<div class="flex h-full w-full flex-1 flex-col gap-4 rounded-xl">
+    <div class="grid auto-rows-min gap-4 md:grid-cols-3 max-lg:grid-cols-1">
+        @foreach ($products as $product)
             <div
-                class="items-center justify-end flex text-xl text-gray-800 dark:text-white"
+                class="relative rounded-3xl border border-neutral-200 dark:border-neutral-700 h-full"
             >
-                <span>Aria</span>
-                <span class="material-symbols-outlined ml-2">smart_toy</span>
+                <div
+                    class="h-full w-auto mx-auto rounded-3xl overflow-hidden shadow-md bg-white dark:bg-neutral-900"
+                >
+                    <div class="flex flex-col p-4 gap-2 h-full">
+                        <div class="w-full h-48 overflow-hidden">
+                            <img
+                                src="https://picsum.photos/id/237/200/300"
+                                alt="random"
+                                class="w-full h-48 object-cover rounded-2xl"
+                            />
+                        </div>
+                        <div class="items-end flex justify-between mt-2">
+                            <div class="text-xl font-bold truncate mr-2">
+                                <span>{{ $product->title }}</span>
+                            </div>
+                            <div class="text-sm whitespace-nowrap">
+                                <span class="capitalize">Posted by:</span>
+                                <span>Aria</span>
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <p
+                                class="text-gray-600 dark:text-gray-300 text-sm line-clamp-2"
+                            >
+                                {{ $product->description }}
+                            </p>
+                        </div>
+                        <div class="mt-auto">
+                            <h2 class="font-semibold">
+                                Start form Rp{{ $product->base_price }}
+                            </h2>
+                        </div>
+                        <div class="flex justify-between items-center mt-2">
+                            <span
+                                class="px-2 py-1 bg-blue-100 text-black text-xs rounded"
+                            >
+                                Type: {{ $product->type }}
+                            </span>
+                            <div class="flex justify-end items-center">
+                                <span>3 Sold / 4.5</span>
+                                <span class="material-symbols-outlined ml-2">
+                                    star_half
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="flex justify-end items-center">
-                <span>3 Sold / 4.5</span>
-                <span class="material-symbols-outlined ml-2">star_half</span>
-            </div>
-        </div>
+        @endforeach
     </div>
 </div>
