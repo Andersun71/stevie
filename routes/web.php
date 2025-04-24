@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Livewire;
+
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
@@ -21,9 +23,7 @@ Route::view('product', 'product')
     ->middleware(['auth', 'verified'])
     ->name('product');
 
-Route::view('detail-product', 'detail-product')
-    ->middleware(['auth', 'verified'])
-    ->name('detail-product');
+Route::get('/product/{id}', DetailProduct::class);
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');

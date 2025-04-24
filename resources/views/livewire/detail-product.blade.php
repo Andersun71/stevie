@@ -2,9 +2,9 @@
     <div class="flex flex-col gap-4">
         <div class="w-full h-auto overflow-hidden">
             <img
-                src="https://picsum.photos/id/10/400/300"
-                alt=""
-                class="w-full max-h-96 object-cover rounded-2xl"
+                src="{{ $product->images }}"
+                alt="{{ $product->title }}"
+                class="w-full min-h-96 object-cover rounded-2xl"
             />
         </div>
         <div
@@ -65,9 +65,11 @@
         <!-- product -->
         <div class="flex flex-col">
             <span class="font-bold text-4xl capitalize">
-                jasa design mas ari
+                {{ $product->title }}
             </span>
-            <span class="font-bold text-2xl">Rp. 100.000</span>
+            <span class="font-bold text-2xl">
+                Rp{{ $product->base_price }}
+            </span>
         </div>
 
         <div class="flex">
@@ -94,12 +96,21 @@
             </div>
         </div>
 
+        <div class="flex gap-2">
+            @foreach ($categories as $category)
+                <div class="py-1 px-2 bg-gray-200 rounded">
+                    <flux:heading class="lowercase text-black">
+                        {{ $category->name }}
+                    </flux:heading>
+                </div>
+            @endforeach
+        </div>
+
         <!-- description -->
         <div class="flex flex-col gap-2">
             <flux:heading class="capitalize">description</flux:heading>
             <flux:text>
-                This is the standard text component for body copy and general
-                content throughout your application.
+                {{ $product->description }}
             </flux:text>
         </div>
 
