@@ -1,3 +1,3 @@
 <x-layouts.app :title="__('Services')">
-    <livewire:service-card />
+    <livewire:product-card type="services" />
 </x-layouts.app>

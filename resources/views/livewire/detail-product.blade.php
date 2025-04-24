@@ -97,6 +97,11 @@
         </div>
 
         <div class="flex gap-2">
+            <div class="py-1 px-2 bg-gray-200 rounded">
+                <flux:heading class="lowercase text-black">
+                    {{ $product->type }}
+                </flux:heading>
+            </div>
             @foreach ($categories as $category)
                 <div class="py-1 px-2 bg-gray-200 rounded">
                     <flux:heading class="lowercase text-black">
