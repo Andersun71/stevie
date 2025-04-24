@@ -8,7 +8,11 @@
             container
             class="sticky top-0 z-50 border-b border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900"
         >
-            <flux:sidebar.toggle class="lg:hidden" icon="bars-2" inset="left" />
+            <flux:sidebar.toggle
+                class="lg:hidden me-2"
+                icon="bars-2"
+                inset="left"
+            />
 
             <flux:spacer class="lg:hidden" />
 
@@ -46,12 +50,6 @@
                         </flux:tooltip>
 
                         <flux:menu>
-                            <flux:menu.item icon="plus">
-                                New post
-                            </flux:menu.item>
-
-                            <flux:menu.separator />
-
                             <flux:menu.submenu heading="Sort by">
                                 <flux:menu.radio.group>
                                     <flux:menu.radio checked>
@@ -75,12 +73,6 @@
                                     Archived
                                 </flux:menu.checkbox>
                             </flux:menu.submenu>
-
-                            <flux:menu.separator />
-
-                            <flux:menu.item variant="danger" icon="trash">
-                                Delete
-                            </flux:menu.item>
                         </flux:menu>
                     </flux:dropdown>
                 </div>
@@ -190,7 +182,7 @@
             </a>
 
             <flux:navlist variant="outline">
-                <flux:navlist.group :heading="__('Platform')">
+                <flux:navlist.group>
                     <flux:navlist.item
                         icon="home"
                         :href="route('dashboard')"

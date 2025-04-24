@@ -21,7 +21,7 @@
                             </div>
                             <div class="text-sm whitespace-nowrap">
                                 <span class="capitalize">Posted by:</span>
-                                <span>{{ $service->user->name }}</span>
+                                <span>{{ $service->user->name }}r</span>
                             </div>
                         </div>
                         <div class="flex-grow">
