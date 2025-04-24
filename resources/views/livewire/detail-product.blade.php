@@ -2,8 +2,8 @@
     <div class="flex flex-col gap-4">
         <div class="w-full h-auto overflow-hidden">
             <img
-                src="{{ $product->images }}"
-                alt="{{ $product->title }}"
+                src="{{ $product->images ?? "#" }}"
+                alt="{{ $product->title ?? "Product image" }}"
                 class="w-full min-h-96 object-cover rounded-2xl"
             />
         </div>
@@ -65,10 +65,10 @@
         <!-- product -->
         <div class="flex flex-col">
             <span class="font-bold text-4xl capitalize">
-                {{ $product->title }}
+                {{ $product->title ?? "Untitled Product" }}
             </span>
             <span class="font-bold text-2xl">
-                Rp{{ $product->base_price }}
+                Rp{{ $product->base_price ?? "0" }}
             </span>
         </div>
 
@@ -99,13 +99,13 @@
         <div class="flex gap-2">
             <div class="py-1 px-2 bg-gray-200 rounded">
                 <flux:heading class="lowercase text-black">
-                    {{ $product->type }}
+                    {{ $product->type ?? "Unknown" }}
                 </flux:heading>
             </div>
             @foreach ($categories as $category)
                 <div class="py-1 px-2 bg-gray-200 rounded">
                     <flux:heading class="lowercase text-black">
-                        {{ $category->name }}
+                        {{ $category->name ?? "Not Loaded" }}
                     </flux:heading>
                 </div>
             @endforeach
@@ -115,7 +115,7 @@
         <div class="flex flex-col gap-2">
             <flux:heading class="capitalize">description</flux:heading>
             <flux:text>
-                {{ $product->description }}
+                {{ $product->description ?? "No description available" }}
             </flux:text>
         </div>
 
