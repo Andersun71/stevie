@@ -17,10 +17,10 @@
             <flux:spacer class="lg:hidden" />
 
             <flux:navbar
-                class="me-1.5 space-x-2 rtl:space-x-reverse py-0! w-full flex gap-1.5 justify-between items-center"
+                class="me-1.5 space-x-2 rtl:space-x-reverse w-full py-0! flex gap-1.5 justify-between items-center"
             >
-                <div class="flex gap-0.5">
-                    <div class="mb-auto">
+                <div class="flex">
+                    <div>
                         {{ Diglactic\Breadcrumbs\Breadcrumbs::render() }}
                     </div>
                 </div>
