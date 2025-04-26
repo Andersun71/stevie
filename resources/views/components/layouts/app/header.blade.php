@@ -20,46 +20,9 @@
                 class="me-1.5 space-x-2 rtl:space-x-reverse py-0! w-full flex gap-1.5 justify-between items-center"
             >
                 <div class="flex gap-0.5">
-                    <!-- Filters -->
-                    <flux:dropdown>
-                        <flux:tooltip
-                            :content="__('Filters')"
-                            position="bottom"
-                        >
-                            <flux:button
-                                variant="ghost"
-                                icon="adjustments-horizontal"
-                                class="rounded-full p-2 cursor-pointer max-lg:hidden"
-                                :label="__('Filters')"
-                            />
-                        </flux:tooltip>
-
-                        <flux:menu>
-                            <flux:menu.submenu heading="Sort by">
-                                <flux:menu.radio.group>
-                                    <flux:menu.radio checked>
-                                        Name
-                                    </flux:menu.radio>
-                                    <flux:menu.radio>Date</flux:menu.radio>
-                                    <flux:menu.radio>
-                                        Popularity
-                                    </flux:menu.radio>
-                                </flux:menu.radio.group>
-                            </flux:menu.submenu>
-
-                            <flux:menu.submenu heading="Filter">
-                                <flux:menu.checkbox checked>
-                                    Draft
-                                </flux:menu.checkbox>
-                                <flux:menu.checkbox checked>
-                                    Published
-                                </flux:menu.checkbox>
-                                <flux:menu.checkbox>
-                                    Archived
-                                </flux:menu.checkbox>
-                            </flux:menu.submenu>
-                        </flux:menu>
-                    </flux:dropdown>
+                    <div class="mb-auto">
+                        {{ Diglactic\Breadcrumbs\Breadcrumbs::render() }}
+                    </div>
                 </div>
 
                 <div class="flex">

@@ -2,7 +2,7 @@
     @if (isset($headerType) && $headerType === "product")
         <x-layouts.app.product-header />
     @else
-        <x-layouts.app.header />
+        <x-layouts.app.header :title="$title ?? null" />
     @endif
     <flux:main>
         {{ $slot }}
