@@ -1,6 +1,10 @@
 <section class="w-full">
     @include("partials.settings-heading")
 
+    <div class="mb-6">
+        {{ Diglactic\Breadcrumbs\Breadcrumbs::render() }}
+    </div>
+
     <x-settings.layout
         :heading="__('Profile')"
         :subheading="__('Update your name and email address')"

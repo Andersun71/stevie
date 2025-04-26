@@ -23,7 +23,7 @@ Route::view('product', 'product')
     ->middleware(['auth', 'verified'])
     ->name('product');
 
-Route::get('/product/{id}', DetailProduct::class);
+Route::get('/product/{id}', DetailProduct::class)->name('product.show');
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
