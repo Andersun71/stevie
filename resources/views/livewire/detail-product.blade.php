@@ -4,7 +4,7 @@
             <img
                 src="{{ $product->images ?? "#" }}"
                 alt="{{ $product->title ?? "Product image" }}"
-                class="w-full min-h-96 object-cover rounded-2xl"
+                class="w-full min-h-96 max-h-96 object-cover rounded-2xl"
             />
         </div>
         <div

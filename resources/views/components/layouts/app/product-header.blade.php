@@ -20,6 +20,21 @@
                 class="me-1.5 space-x-2 rtl:space-x-reverse py-0! w-full flex gap-1.5 justify-between items-center"
             >
                 <div class="flex gap-0.5">
+                    <!-- Search -->
+                    <flux:tooltip
+                        :content="__('Search')"
+                        position="bottom"
+                        class="flex flex-row-reverse items-center gap-2"
+                    >
+                        <flux:navbar.item
+                            class="!h-10 [&>div>svg]:size-5 justify-end"
+                            icon="magnifying-glass"
+                            href="#"
+                            :label="__('Search')"
+                        />
+                        <flux:input size="sm" placeholder="Search..." />
+                    </flux:tooltip>
+
                     <!-- Filters -->
                     <flux:dropdown>
                         <flux:tooltip
