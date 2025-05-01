@@ -55,3 +55,9 @@ Breadcrumbs::for('settings.appearance', function (BreadcrumbTrail $trail) {
     $trail->parent('settings');
     $trail->push('Appearance');
 });
+
+// Settings Delete User
+Breadcrumbs::for('settings.delete-user-form', function (BreadcrumbTrail $trail) {
+    $trail->parent('settings');
+    $trail->push('Delete Account');
+});
