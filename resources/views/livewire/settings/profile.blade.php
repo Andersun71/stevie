@@ -7,7 +7,7 @@
     >
         <div class="flex gap-8 w-full">
             <div class="flex flex-col gap-6 w-full">
-                <!-- Personal Information Section -->
+                <!-- Personal -->
                 <div class="grid grid-cols-3 gap-4">
                     <div class="flex flex-col">
                         <span class="capitalize text-gray-400 text-sm">
@@ -37,7 +37,7 @@
 
                 <flux:separator text="contact detail" />
 
-                <!-- Contact Information Section -->
+                <!-- Contact -->
                 <div class="grid grid-cols-2 gap-4">
                     <div class="flex flex-col">
                         <span class="capitalize text-gray-400 text-sm">
@@ -59,7 +59,7 @@
 
                 <flux:separator text="address detail" />
 
-                <!-- Address Information Section -->
+                <!-- Address -->
                 <div class="grid grid-cols-2 gap-4">
                     <div class="flex flex-col">
                         <span class="capitalize text-gray-400 text-sm">
@@ -85,22 +85,42 @@
                     </flux:modal.trigger>
                 </div>
 
-                <flux:modal name="edit-profile" class="md:w-96">
+                <flux:modal name="edit-profile" class="w-auto">
                     <div class="space-y-6">
                         <form
                             wire:submit="updateProfileInformation"
                             class="my-6 w-full space-y-6"
                         >
-                            <flux:input
-                                wire:model="name"
-                                :label="__('Name')"
-                                type="text"
-                                required
-                                autofocus
-                                autocomplete="name"
-                            />
+                            <div class="grid grid-cols-2 gap-4">
+                                <flux:input
+                                    wire:model="name"
+                                    :label="__('Name')"
+                                    type="text"
+                                    required
+                                    autofocus
+                                    autocomplete="name"
+                                />
+                                <flux:input
+                                    wire:model="username"
+                                    :label="__('Username')"
+                                    type="text"
+                                    required
+                                    autofocus
+                                    autocomplete="username"
+                                />
+                                <flux:input
+                                    wire:model="nisn"
+                                    :label="__('Nisn')"
+                                    type="text"
+                                    required
+                                    autofocus
+                                    autocomplete="nisn"
+                                />
+                            </div>
 
-                            <div>
+                            <flux:separator />
+
+                            <div class="grid grid-cols-2 gap-4">
                                 <flux:input
                                     wire:model="email"
                                     :label="__('Email')"
@@ -131,6 +151,35 @@
                                         @endif
                                     </div>
                                 @endif
+
+                                <flux:input
+                                    wire:model="phone"
+                                    :label="__('Phone Number')"
+                                    type="tel"
+                                    required
+                                    autocomplete="phone"
+                                />
+                            </div>
+
+                            <flux:separator />
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <flux:input
+                                    wire:model="school"
+                                    :label="__('School')"
+                                    type="text"
+                                    required
+                                    autofocus
+                                    autocomplete="school"
+                                />
+                                <flux:input
+                                    wire:model="address"
+                                    :label="__('Address')"
+                                    type="text"
+                                    required
+                                    autofocus
+                                    autocomplete="address"
+                                />
                             </div>
 
                             <div class="flex items-center gap-4">
