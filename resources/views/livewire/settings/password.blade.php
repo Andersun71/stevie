@@ -1,11 +1,12 @@
 <section class="w-full bg-gray-500 rounded-3xl p-8">
     @include("partials.settings-heading")
 
-    <x-settings.layout
-        :heading="__('Update password')"
-        :subheading="__('Ensure your account is using a long, random password to stay secure')"
-    >
-        <form wire:submit="updatePassword" class="mt-6 space-y-6">
+    <x-settings.layout>
+        <div class="flex justify-between items-center w-full">
+            <span class="capitalize">Password</span>
+            <span class="capitalize">Forgot password?</span>
+        </div>
+        <form wire:submit="updatePassword" class="mt-6 space-y-6 md:max-w-lg">
             <flux:input
                 wire:model="current_password"
                 :label="__('Current password')"
