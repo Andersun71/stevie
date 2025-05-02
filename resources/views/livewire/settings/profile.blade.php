@@ -1,10 +1,10 @@
 <section class="w-full bg-gray-500 rounded-3xl p-8">
     @include("partials.settings-heading")
 
-    <x-settings.layout
-        :heading="__('Profile')"
-        :subheading="__('Update your name and email address')"
-    >
+    <x-settings.layout>
+        <div class="mb-6">
+            <span>Profile</span>
+        </div>
         <div class="flex gap-8 w-full">
             <div class="flex flex-col gap-6 w-full">
                 <!-- Personal -->
@@ -81,7 +81,9 @@
 
                 <div class="mt-6">
                     <flux:modal.trigger name="edit-profile">
-                        <flux:button>Edit profile</flux:button>
+                        <flux:button variant="primary">
+                            Edit profile
+                        </flux:button>
                     </flux:modal.trigger>
                 </div>
 
