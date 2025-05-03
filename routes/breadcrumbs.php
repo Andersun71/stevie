@@ -50,6 +50,12 @@ Breadcrumbs::for('settings.password', function (BreadcrumbTrail $trail) {
     $trail->push('Password');
 });
 
+// Settings Review User
+Breadcrumbs::for('settings.review-user', function (BreadcrumbTrail $trail) {
+    $trail->parent('settings');
+    $trail->push('Review');
+});
+
 // Settings Appearance
 Breadcrumbs::for('settings.appearance', function (BreadcrumbTrail $trail) {
     $trail->parent('settings');
