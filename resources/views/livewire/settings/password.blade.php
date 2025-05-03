@@ -4,7 +4,9 @@
     <x-settings.layout>
         <div class="flex justify-between items-center w-full">
             <span class="capitalize">Password</span>
-            <span class="capitalize">Forgot password?</span>
+            <a href="{{ route("password.request") }}" class="capitalize">
+                Forgot password?
+            </a>
         </div>
         <form wire:submit="updatePassword" class="mt-6 space-y-6 md:max-w-lg">
             <flux:input

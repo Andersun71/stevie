@@ -15,7 +15,7 @@
             {{ __("Password") }}
         </a>
         <a
-            href="{{ route("settings.appearance") }}"
+            href="{{ route("settings.review-user") }}"
             wire:navigate
             class="border-b-2 border-transparent hover:border-current pb-2 transition-colors w-full flex items-center justify-center"
         >
