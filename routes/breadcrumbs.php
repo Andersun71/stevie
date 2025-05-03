@@ -29,7 +29,8 @@ Breadcrumbs::for('product', function (BreadcrumbTrail $trail) {
 // Detail Product (dynamic)
 Breadcrumbs::for('product.show', function (BreadcrumbTrail $trail, $id) {
     $trail->parent('product');
-    $trail->push("Detail Product #$id", route('product.show', $id));
+    $product = \App\Models\Product::findOrFail($id);
+    $trail->push($product->title, route('product.show', $id));
 });
 
 // Settings Group
