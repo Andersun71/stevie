@@ -73,7 +73,7 @@
                     </div>
                     <span>4.5</span>
                 </div>
-                <flux:textarea>
+                <flux:textarea readonly>
                     {{ $product->description ?? "No description" }}
                 </flux:textarea>
             </div>
