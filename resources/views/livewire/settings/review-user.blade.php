@@ -1,4 +1,6 @@
-<section class="w-full border border-white rounded-3xl p-8">
+<section
+    class="w-full border border-neutral-200 dark:border-neutral-700 rounded-3xl p-8"
+>
     @include("partials.settings-heading")
 
     <x-settings.layout>
@@ -71,7 +73,7 @@
                     </div>
                     <span>4.5</span>
                 </div>
-                <flux:textarea>
+                <flux:textarea readonly>
                     {{ $product->description ?? "No description" }}
                 </flux:textarea>
             </div>
