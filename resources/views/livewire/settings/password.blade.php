@@ -1,4 +1,4 @@
-<section class="w-full bg-gray-500 rounded-3xl p-8">
+<section class="w-full border border-white rounded-3xl p-8">
     @include("partials.settings-heading")
 
     <x-settings.layout>
