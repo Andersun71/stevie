@@ -1,9 +1,12 @@
-<section class="w-full bg-gray-500 rounded-3xl p-8">
+<section class="w-full border border-white rounded-3xl p-8">
     @include("partials.settings-heading")
 
     <x-settings.layout>
-        <div class="mb-6">
-            <span>Profile</span>
+        <div class="flex flex-col mb-6">
+            <span class="capitalize font-medium text-lg">Profile</span>
+            <span class="text-gray-400 text-sm lowercase">
+                Update your account's profile information and email address
+            </span>
         </div>
         <div class="flex gap-8 w-full">
             <div class="flex flex-col gap-6 w-full">

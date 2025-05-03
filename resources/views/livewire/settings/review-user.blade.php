@@ -1,4 +1,4 @@
-<section class="w-full bg-gray-500 rounded-3xl p-8">
+<section class="w-full border border-white rounded-3xl p-8">
     @include("partials.settings-heading")
 
     <x-settings.layout>
@@ -41,7 +41,9 @@
                 />
             </div>
         </div>
-        <div class="mt-6 bg-gray-400 rounded-2xl p-4 flex justify-between">
+        <div
+            class="mt-6 border border-gray-500 rounded-2xl p-4 flex justify-between"
+        >
             <div class="w-full flex flex-col justify-between">
                 <div class="flex flex-col">
                     <span class="font-medium text-2xl">

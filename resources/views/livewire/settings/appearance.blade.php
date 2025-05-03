@@ -1,10 +1,11 @@
-<section class="w-full bg-gray-500 rounded-3xl p-8">
+<section class="w-full border border-white rounded-3xl p-8">
     @include("partials.settings-heading")
 
-    <x-settings.layout
-        :heading="__('Appearance')"
-        :subheading=" __('Update the appearance settings for your account')"
-    >
+    <x-settings.layout>
+        <div class="mb-6 flex flex-col">
+            <span class="capitalize text-lg font-medium">Appearance</span>
+            <span class="text-gray-400 text-sm lowercase">Customize theme</span>
+        </div>
         <flux:radio.group
             x-data
             variant="segmented"
