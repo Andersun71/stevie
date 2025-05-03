@@ -5,11 +5,13 @@ namespace App\Livewire;
 use Livewire\Component;
 use App\Models\Product;
 use App\Models\User;
-use Livewire\Attributes\on;
+use Livewire\Attributes\On;
+use Livewire\WithPagination;
 
 class ProductCard extends Component
 {
-    public $products;
+    use WithPagination;
+    
     public $type = 'goods';
     public $search = '';
 
@@ -19,30 +21,24 @@ class ProductCard extends Component
     public function updateSearch($search)
     {
         $this->search = $search;
+        $this->resetPage();
     }
 
-    public function mount()
-    {
-        $this->loadProducts();
-    }
-
-    protected function loadProducts()
+    public function render()
     {
         $query = Product::where('type', $this->type);
 
         if ($this->search) {
             $query->where(function($q) {
-                $q->where('name', 'like', '%' . $this->search . '%')
-                  ->orWhere('title', 'like', '%' . $this->search . '%');
+                $q->where('title', 'like', '%' . $this->search . '%')
+                  ->orWhere('description', 'like', '%' . $this->search . '%');
             });
         }
 
-        $this->products = $query->with('user')->get();
-    }
-    public function render()
-    {
+        $products = $query->with('user')->latest()->paginate(9);
+
         return view('livewire.product-card', [
-            "products" => $this->products,
+            "products" => $products,
             "type" => $this->type
         ]);
     }
