@@ -1,10 +1,14 @@
 <section class="w-full bg-gray-500 rounded-3xl p-8">
     @include("partials.settings-heading")
 
-    <x-settings.layout
-        :heading="__('Delete account')"
-        :subheading="__('Delete your account and all of its resources')"
-    >
+    <x-settings.layout>
+        <div class="flex flex-col mb-6">
+            <span class="capitalize font-medium text-lg">Delete account</span>
+            <span class="text-gray-400 text-sm lowercase">
+                Once your account is deleted, all of its resources and data will
+                be permanently deleted
+            </span>
+        </div>
         <flux:modal.trigger name="confirm-user-deletion">
             <flux:button
                 variant="danger"

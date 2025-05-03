@@ -2,13 +2,18 @@
     @include("partials.settings-heading")
 
     <x-settings.layout>
-        <div class="flex justify-between items-center w-full">
-            <span class="capitalize">Password</span>
+        <div class="flex justify-between items-center w-full mb-6">
+            <div class="flex flex-col">
+                <span class="capitalize text-lg font-medium">Password</span>
+                <span class="text-gray-400 text-sm lowercase">
+                    Change your password
+                </span>
+            </div>
             <a href="{{ route("password.request") }}" class="capitalize">
                 Forgot password?
             </a>
         </div>
-        <form wire:submit="updatePassword" class="mt-6 space-y-6 md:max-w-lg">
+        <form wire:submit="updatePassword" class="space-y-6 md:max-w-lg">
             <flux:input
                 wire:model="current_password"
                 :label="__('Current password')"
