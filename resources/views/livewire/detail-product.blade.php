@@ -1,3 +1,4 @@
+
 <div class="grid grid-cols-2 max-lg:grid-cols-1 max-lg:mx-2 gap-4 h-full">
     <div class="flex flex-col gap-4">
         <div class="w-full h-auto overflow-hidden">
@@ -31,27 +32,54 @@
             <!-- review modal -->
             <div class="w-full mt-2">
                 <flux:modal.trigger name="show-review">
-                    <flux:button class="w-full">show review</flux:button>
+                    <flux:button class="w-full">Review</flux:button>
                 </flux:modal.trigger>
 
                 <flux:modal name="show-review" class="w-full">
                     <div class="space-y-6">
                         <div>
                             <flux:heading size="lg">Reviews</flux:heading>
-                            <flux:text class="mt-2 lowercase">
-                                Your review makes our product better
-                            </flux:text>
-                            <flux:button class="mt-2 lowercase">
-                                Write a review
-                            </flux:button>
+
+                            <!-- Alpine.js untuk Rating -->
+                            <div x-data="{ rating: 0 }" class="flex items-center space-x-1 text-3xl text-yellow-500">
+                                <template x-for="i in 5">
+                                    <span
+                                        @click="rating = i"
+                                        class="material-symbols-outlined cursor-pointer"
+                                        :style="`font-variation-settings: 'FILL' ${i <= rating ? 1 : 0}, 'wght' 400`"
+                                    >
+                                        star
+                                    </span>
+                                </template>
+
+                                <!-- Input Rating Tersembunyi untuk Livewire -->
+                                <input type="hidden" wire:model="rating" :value="rating">
+                            </div>
+
+                            <!-- Input Comment dengan Wire -->
+                            <flux:input
+                                wire:model="review"
+                                :label="__('Comment')"
+                                type="text"
+                                required
+                                autofocus
+                                autocomplete="review"
+                            />
                         </div>
 
-                        <flux:separator />
-
-                        <div class="w-full bg-yellow-200">apa</div>
+                        <!-- Tombol Kirim -->
+                        <flux:button
+                            variant="primary"
+                            type="submit"
+                            class="w-full"
+                        >
+                            {{ __("Send") }}
+                        </flux:button>
                     </div>
                 </flux:modal>
             </div>
+
+            <!-- batas -->
         </div>
     </div>
     <div class="flex flex-col gap-4 mx-10 max-lg:mx-2">
@@ -118,3 +146,4 @@
         </flux:button>
     </div>
 </div>
+
